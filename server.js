@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(errorHandler);
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.ORIGIN,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
