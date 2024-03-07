@@ -1,0 +1,36 @@
+GET http://localhost:5000/ HTTP/1.1 
+Content-Type: application/json
+
+###
+
+
+
+
+
+POST http://localhost:5000/api/data/add HTTP/1.1 
+Content-Type: application/json
+
+{
+    "entry":"mkmkbhbbh",
+    
+    "addCount":0,
+    "updateCount":0
+}
+
+###
+
+
+
+PATCH  http://localhost:5000/api/data/update HTTP/1.1 
+Content-Type: application/json
+
+{
+    "_id":"65e9822d054f6823fdb8ee1a",
+    "entry":"m2121",
+    
+    "addCount":0,
+    "updateCount":0
+}
+
+###
+
