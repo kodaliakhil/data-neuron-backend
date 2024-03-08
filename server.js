@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 const dataRoutes = require("./routes/dataRoutes");
 const errorHandler = require("./middlewares/errorMiddleware");
 const cors = require("cors");
+const morgan = require("morgan");
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -23,6 +25,7 @@ app.use(
     credentials: true,
   })
 );
+app.use(morgan("dev"));
 
 // Routes
 app.use("/api/data", dataRoutes);
