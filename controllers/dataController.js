@@ -50,7 +50,18 @@ const updateData = asyncHandler(async (req, res) => {
   }
 });
 
+const getData = asyncHandler(async (req, res) => {
+  const data = await Data.find();
+  if (data) {
+    res.status(200).json(data);
+  } else {
+    res.status(400);
+    throw new Error("Data not found");
+  }
+});
+
 module.exports = {
   addData,
   updateData,
+  getData
 };
